@@ -294,7 +294,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 name = "pymysql"
 version = "1.0.2"
 description = "Pure Python MySQL Driver"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 
@@ -411,6 +411,7 @@ python-versions = "*"
 lock-version = "1.1"
 python-versions = "^3.9"
 content-hash = "c6454236d04c3663c7dd2fe5502e6268d8a6df9fa81d4b8b00effd2853d3d41b"
+
 
 [metadata.files]
 asgiref = [
