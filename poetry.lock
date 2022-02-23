@@ -361,7 +361,7 @@ python-versions = ">=3.7"
 
 [[package]]
 name = "types-pymysql"
-version = "1.0.6"
+version = "1.0.13"
 description = "Typing stubs for PyMySQL"
 category = "dev"
 optional = false
@@ -410,7 +410,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "943f43854d067424aee4b159c042f7c3766e7e491e34360bcaa844eed23c5031"
+content-hash = "c6454236d04c3663c7dd2fe5502e6268d8a6df9fa81d4b8b00effd2853d3d41b"
 
 [metadata.files]
 asgiref = [
@@ -643,8 +643,8 @@ tomli = [
     {file = "tomli-2.0.1.tar.gz", hash = "sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"},
 ]
 types-pymysql = [
-    {file = "types-PyMySQL-1.0.6.tar.gz", hash = "sha256:2f43b8ba9357c0b158cba26b58b36951754db45b8c8e7d301d0208de598cb7d6"},
-    {file = "types_PyMySQL-1.0.6-py3-none-any.whl", hash = "sha256:0589f4076bb37dbc3c95de14aa4b66c919b220cb3437ef7775c184ac7b27807b"},
+    {file = "types-PyMySQL-1.0.13.tar.gz", hash = "sha256:6facc31e968e47a1755f50dcfbaec302145e8f802cb53a3103f99b9a5b72154d"},
+    {file = "types_PyMySQL-1.0.13-py3-none-any.whl", hash = "sha256:eac4efcee094bf0e93ff46cfefcae219401ddb8a114227055fc4c9e13f8dd1fb"},
 ]
 types-pytz = [
     {file = "types-pytz-2021.3.5.tar.gz", hash = "sha256:fef8de238ee95135952229a2a23bfb87bd63d5a6c8598106a46cfcf48f069ea8"},
