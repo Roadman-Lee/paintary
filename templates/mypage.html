@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/mypage.css' %}">
+    <title>Title</title>
+</head>
+<body>
+    <div class="user-container">
+        <div id="user-img">
+            <img src="">
+        </div>
+        <div id="user-info">
+            <h2>user name</h2>
+            <h3>@user_id</h3>
+            <h5>자기소개</h5>
+            <button>프로필 변경</button>
+        </div>
+    </div>
+    <div class="saved-container">
+        <div class="saved">
+            <hr>
+            <h3>Saved</h3>
+        </div>
+<!--saved contents 보여주는 것 : 인덱스처럼 호버, saved해제 -->
+        <div class="saved-content">
+
+        </div>
+    </div>
+
+</body>
+</html>

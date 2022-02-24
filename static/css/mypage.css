@@ -1,0 +1,14 @@
+
+
+
+.user-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#user-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
