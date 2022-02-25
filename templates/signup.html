@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div>
+      <div>
+        <div class="header">
+          <img class="header-logo">
+          <h3>paintary에 오신걸 환영합니다</h3>
+          <p class="text-gray-400 text-xs">그림일기 플랫폼 paintary를 이용해보세요.</p>
+        </div>
+        <form method="post" action="/sign-up/">
+          {% csrf_token %}
+          <div class="your-name">
+            <p>your Name:</p>
+            <input class="" type="text" name="username">
+          </div>
+          <div class="your-email">
+            <p>Email Address:</p>
+            <input type="text" name="email">
+          </div>
+          <div class="your_password">
+            <p>Password:</p>
+            <input type="text" name="password">
+          </div>
+          <div class="your_password_confirm">
+            <p>Password confirm:</p>
+            <input type="text" name="password2">
+          </div>
+          <button type="submit">회원가입</button>
+        </div>
+        {% if error %}
+          <div class="alert alert-danger" role="alert">
+            {{ error }}
+          </div>
+        {% endif %}
+      </form>
+    </div>
+  </body>
+
+</html>
