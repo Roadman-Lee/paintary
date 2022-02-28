@@ -9,7 +9,7 @@ python = "^3.9"
 Django = "^4.0.2"
 django-allauth = "0.45"
 requests = "^2.27.1"
-
+PyMySQL = "^1.0.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
