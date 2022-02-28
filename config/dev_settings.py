@@ -5,7 +5,7 @@ MY_SECRET = {
 MY_DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "sys",
+        "NAME": "paintary",
         "USER": "admin",
         "PASSWORD": "15zizo15",
         "HOST": "paintary.c6cob4zyc15j.ap-northeast-2.rds.amazonaws.com",
