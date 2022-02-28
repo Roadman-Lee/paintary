@@ -21,9 +21,8 @@ def upload_view(request, id):
             photo = request.POST.get('photo')
             writing = request.POST.get('writing')
             postdate = request.POST.get('postdate')
-            fontstyle = request.POST.get('fontstyle')
 
-            upload = PostModel(user_id=user_id, photo=photo, writing=writing, postdate=postdate, fontstyle=fontstyle)
+            upload = PostModel(user_id=user_id, photo=photo, writing=writing, postdate=postdate)
             upload.save()
             print('post', str(id))
             return redirect('upload',id)
