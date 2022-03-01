@@ -17,7 +17,7 @@ function posting(artist) {
     form_data.append("image", file)
     form_data.append("value", value)
     console.log(form_data)
-    console.log(artist)
+    // console.log(artist)
 
     $.ajax({
         type: "POST",
@@ -30,6 +30,7 @@ function posting(artist) {
             let image_url = response['file_url'];
             console.log(image_url);
             $("#styled_img").attr('src', image_url)
+            return image_url
         }
     });
 }

@@ -18,7 +18,8 @@ def upload_view(request, id):
 
         elif request.method == 'POST':
 
-            photo = request.POST.get('photo')
+            photo = request.POST.get('image_url')
+            print(photo)
             writing = request.POST.get('writing')
             postdate = request.POST.get('postdate')
 
