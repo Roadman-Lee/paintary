@@ -1,42 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends "base.html" %}
+{% block extrahead %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "contents/css/detail.css" %}" >
     <title>detail</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../../static/contents/css/detail.css">
-</head>
-<body>
+{% endblock %}
+{% block content %}
+    <h2>Detail</h2>
 
-<h2>Detail</h2>
+    <section>
+        <nav>
+            <ul>
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTExMjFfMjAw%2FMDAxNjM3NDgwMTI0MDU5.Bhp-z8ZKoYOjYZ39KE3pJYT3z5-EY3OTyyUCEg8x4DYg._447i0ALBMHYXddvnyojn-572ADpRyTZIuMdrN7HWeMg.JPEG.design_modi%2F02.jpg&type=sc960_832">
+            </ul>
+        </nav>
 
-<section>
-    <nav>
-        <ul>
-            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTExMjFfMjAw%2FMDAxNjM3NDgwMTI0MDU5.Bhp-z8ZKoYOjYZ39KE3pJYT3z5-EY3OTyyUCEg8x4DYg._447i0ALBMHYXddvnyojn-572ADpRyTZIuMdrN7HWeMg.JPEG.design_modi%2F02.jpg&type=sc960_832">
-        </ul>
-    </nav>
-
-    <article>
-        <div class="icon">
-            <div class="download">
-                <a href="##"><img src="../../static/image/download.png"></a>
+        <article>
+            <div class="icon">
+                <div class="download">
+                    <a href="##"><img src="../../static/image/download.png"></a>
+                </div>
+                <div class="share">
+                    <a href="##"><img src="../../static/image/share.png"></a>
+                </div>
+                <div class="save">
+                    <a href="##" download="my_image.png"><img src="../../static/image/bookmark.png"></a>
+                </div>
             </div>
-            <div class="share">
-                <a href="##"><img src="../../static/image/share.png"></a>
-            </div>
-            <div class="save">
-                <a href="##" download="my_image.png"><img src="../../static/image/bookmark.png"></a>
-            </div>
-        </div>
 
-        <h1>Title</h1>
-        <p>날짜출력</p>
-        <p>안녕하세요 업로드시에 일기 내용이 출력됩니다.</p>
-    </article>
-</section>
+            <h1>Title</h1>
+            <p>날짜출력</p>
+            <p>안녕하세요 업로드시에 일기 내용이 출력됩니다.</p>
+        </article>
+    </section>
+{% endblock %}
 
-
-</body>
-</html>
 

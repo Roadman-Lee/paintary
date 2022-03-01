@@ -1,3 +1,31 @@
+@font-face {
+    font-family: 'KCC-Jeongbeom';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/KCC-Jeongbeom.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BMEuljiro10yearslater';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/BMEuljiro10yearslater.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .col-8 {
     display: flex;
     align-items: center;
@@ -9,6 +37,7 @@
     padding: 10px;
 
 }
+
 .col-4 {
     display: flex;
     align-items: center;
@@ -27,7 +56,7 @@
     margin-bottom: 10px;
 }
 
-.mb-3 img{
+.mb-3 img {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -57,5 +86,5 @@ nav ul {
 }
 
 img {
-  float: left;
+    float: left;
 }

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import PostModel, ScrapModel, CommentModel
-from users.models import User
+from users.models import UserModel
 # Create your views here.
 from PIL import Image
 from PIL import ImageFont
