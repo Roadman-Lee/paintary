@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from datetime import timedelta
 import os
 from pathlib import Path
+from re import search
 from typing import List
 
 import pymysql
@@ -53,6 +54,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.kakao',
     "contents",
+    "search",
 ]
 
 SITE_ID = 2
