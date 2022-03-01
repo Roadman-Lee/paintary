@@ -1,79 +1,35 @@
-<!DOCTYPE html>
-<html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <title>CSS Navigation bar</title>
-    <style>
-        ul {
-            background-color: #ffffff;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        li {
-            float: left;
-        }
-
-        li a {
-            display: block;
-            background-color: #FFFFff;
-            color: #000000;
-            padding: 8px;
-            text-decoration: none;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        li a.current {
-            background-color: #FF6347;
-            color: white;
-        }
-
-        li a:hover:not(.current) {
-            background-color: #4b4747;
-            color: white;
-        }
-    </style>
-</head>
-
-<body>
-
-
-<ul>
-    <li><a href="/index.php">Home(logo)</a></li>
-    <li><a href="/index.php">search</a></li>
-    <ul style="float:right; list-style-type:none;">
-        <li><a href="/bbs/login.php">로그인</a></li>
-        <li><a href="/bbs/register_form.php">회원가입</a></li>
-    </ul>
-</ul>
-
-<!DOCTYPE html>
-<html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
+{% extends "base.html" %}
+{% block extrahead %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "contents/css/detail.css" %}" >
     <title>HTML Tables</title>
-</head>
-
-<body>
-<hr>
+{% endblock %}
+{% block content %}
+    <hr>
 <div class="feed">
     <table style="width:100%">
         <tr style="background-color:white">
-            {% for post in posts %}
-                <img src="{{ post.photo }}">
-                {{ post.user_id }}
-            {% endfor %}
+            <img src="paintary\static\image\a.jpg">
+            <img src="paintary\static\image\b.jpg">
+            <img src="paintary\static\image\c.jpg">
+        </tr>
+        <tr>
+            <img src="paintary\static\image\d.jpg">
+            <img src="paintary\static\image\e.jpg">
+            <img src="paintary\static\image\f.jpg">
+        </tr>
+        <tr>
+            <img src="paintary\static\image\g.jpg">
+            <img src="paintary\static\image\h.jpg">
+            <img src="paintary\static\image\i.jpg">
         </tr>
     </table>
 </div>
-</body>
+{% endblock %}
 
-</html>
-</body>
 
-</html>
+
+
+
+
+
