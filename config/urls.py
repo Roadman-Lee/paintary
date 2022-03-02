@@ -25,7 +25,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('profile/', Profile.as_view()),
     # path('content/', include('content.urls')),
-    path('profile/update', Profile.as_view(), name='profile'),
+    # path('profile/update', Profile.as_view(), name='profile'),
     path('', include('contents.urls')),
     path('', include('search.urls')),
     path('reset_password/', auth_view.PasswordResetView.as_view(), name="reset_password"),

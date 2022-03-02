@@ -8,6 +8,7 @@
     <img src="{% static "logo1.png" %}" alt="logo">
     <div class="search_input">
         <form action="/search/" method="post" name="search">
+        {% csrf_token %}
             <input type="text" placeholder="Type to search..">
         <button class="btn_search">
             <span class="material-icons-outlined" >
@@ -18,7 +19,7 @@
     </div>
     <div class="nav_inner">
         {% comment %} <img src="{% static "image/logout.png" %}" alt="logout">
-        <img src="{% static "image/default_user_profile.jpeg" %}" alt="profile"> {% endcomment %}
+        <img src="{% static "image/profile.jpg" %}" alt="profile"> {% endcomment %}
         <span class="material-icons-outlined">
             logout
         </span>

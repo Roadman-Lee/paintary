@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
 # from content.models import Feed
+from content.models import Feed, Bookmark
 from users.models import UserModel
 
 
@@ -8,11 +9,11 @@ class Profile(APIView):
     def get(self, request):
         email = request.session.get('email', None)
         if email is None:
-            return render(request, 'user/login.html')
+            return render(request, 'account/login.html')
 
         user = User.objects.filter(email=email).first()
         if user is None:
-            return render(request, 'user/login.html')
+            return render(request, 'account/login.html')
 
         feed_object_list = Feed.objects.filter(email=email).order_by('-id')
         feed_list = []
@@ -72,10 +73,7 @@ class Profile(APIView):
             bookmark_feed_list.append(dict(row_bookmark_feed_list=row_bookmark_feed_list))
 
         return render(request,
-                      'nsft/profile.html',
+                      'account/profile.html',
                       context=dict(feed_list=feed_list,
                                    bookmark_feed_list=bookmark_feed_list,
-                                   feed_count=feed_count,
-                                   following_count=following_count,
-                                   follower_count=follower_count,
                                    user=user))

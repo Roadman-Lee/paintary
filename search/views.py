@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from contents.models import PostModel
 # Create your views here.
 def search(request):
     if request.method == 'POST':

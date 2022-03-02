@@ -28,31 +28,6 @@ class UploadFeed(APIView):
         return Response(status=200)
 
 
-class LikeFeed(APIView):
-    def post(self, request):
-        feed_id = request.data.get('feed_id')
-        email = request.data.get('email')
-        is_like = request.data.get('is_like', 'True')
-
-        if is_like.lower() == 'false':
-            is_like = False
-        else:
-            is_like = True
-        feed_like = FeedLike.objects.filter(feed_id=feed_id, email=email).first()
-
-        if feed_like is None:
-            FeedLike.objects.create(feed_id=feed_id,
-                                    email=email,
-                                    is_like=is_like,
-                                    )
-        else:
-            feed_like.is_like = is_like
-            feed_like.save()
-
-        return Response(status=200, data=dict(message='피드 좋아요 완료.'))
-
-
-
 
 class BookmarkFeed(APIView):
     def post(self, request):

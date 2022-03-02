@@ -6,7 +6,7 @@ from django.shortcuts import render, redirect
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.views import View
-from users.models import UserModel
+from .models import UserModel
 from django.http import HttpResponse
 from django.contrib.auth import get_user_model  # 사용자가 데이터베이스 안에 있는지 검사하는 함수
 from django.contrib import auth

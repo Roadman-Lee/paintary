@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import UploadFeed, CreateReply, LikeFeed, BookmarkFeed
+from .views import UploadFeed, BookmarkFeed
 
 
 urlpatterns = [
