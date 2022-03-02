@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'profile.css' %}">
+    <title>Title</title>
+    <link
+            href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+            rel="stylesheet">
+</head>
+<body>
+
+
+    <div class="user-container">
+        <div id="user-img">
+            <img src="{% get_media_prefix %}{{ user.thumbnail }}">
+        </div>
+        <div id="user-info">
+            <h2>{{ user.username }}</h2>
+            <h3>{{ user.email }}</h3>
+            <button id="button_profile_upload">프로필 변경</button>
+            <input type="file" id="input_fileupload" style="display:none;"/>
+        </div>
+    </div>
+{#    <div class="mypage-container">#}
+{#        <hr>#}
+{#        <div class="mypage-wrapper">#}
+{#            <div id="created">#}
+{#                <h3>created</h3>#}
+{#            </div>#}
+{#            <div id="saved">#}
+{#                <h3>Saved</h3>#}
+{#            </div>#}
+{##}
+{#        </div>#}
+<!--saved contents 보여주는 것 : 인덱스처럼 호버, saved해제 -->
+        <div class="saved-content">
+<!-- 중앙 메뉴 -->
+            <div style="font-size: 14px;padding: 0 140px;border-top: 1px solid silver; display: flex;width: 100%; flex-direction: row; justify-content: space-evenly">
+                <div target_id="menu_feed" class="menu_content"
+                     style="display: flex; flex-direction: row; align-items: center;padding-top: 10px; border-top: 1px solid gray;font-weight: bold"> <span
+                        class="material-icons-outlined" style="font-size: 16px">
+                    grid_on
+                    </span> created
+                </div>
+                <div target_id="menu_bookmark" class="menu_content"
+                     style="display: flex; flex-direction: row; align-items: center;padding-top: 10px;font-weight: lighter"> <span
+                        class="material-icons-outlined" style="font-size: 16px">
+                    bookmark_border
+                </span> <b>saved</b>
+                </div>
+            </div>
+            <!-- 하단 컨텐츠 -->
+            <div id="menu_feed" class="menu_content_box" style="display: flex; flex-direction: column">
+                {% for feed in feed_list %}
+                    <div style="display: flex; flex-direction: row">
+                        {% for row_feed in feed.row_feed_list %}
+                            <div>
+                                <img class="row_feed" src="{% get_media_prefix %}{{ row_feed.image }}">
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+            <div id="menu_bookmark" class="menu_content_box" style="display: none; flex-direction: column">
+                {% for feed in bookmark_feed_list %}
+                    <div style="display: flex; flex-direction: row">
+                        {% for row_feed in feed.row_bookmark_feed_list %}
+                            <div>
+                                <img class="row_feed" src="{% get_media_prefix %}{{ row_feed.image }}">
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+{#    프로필 변경 jquery code#}
+<script defer>
+    {##button_profile_upload 를 클릭했을 때 함수가 실행된다#}
+    {#실행되는 함수는 input_fileupload고 디스플레이 none을 해놨기때문에 버튼을 클릭하면 실행이됨#}
+    $( '#button_profile_upload').click(function (){
+        $('#input_fileupload').click();
+    })
+{#업로드한 사진을 저장하고 불러오는 함수#}
+    function ajaxFileUpload() {
+        // 업로드 버튼이 클릭되면 파일 찾기 창을 띄운다.
+        $("#ajaxFile").click();
+    }
+
+    function ajaxFileChange() {
+        // 파일이 선택되면 업로드를 진행한다.
+        ajaxFileTransmit();
+    }
+
+    function ajaxFileTransmit() {
+        var formData = new FormData();
+        formData.append("file", $("#ajaxFile")[0].files[0]);
+
+        $.ajax({
+            url: "{% url 'profile_update' %}"
+            , type: "POST"
+            , processData: false
+            , contentType: false
+            , data: formData
+            , dataType: "json"
+            , success: function (obj) {
+                let uuid = obj.uuid;
+                console.log(uuid);
+                $('.profile_img').attr('src', '{% get_media_prefix %}' + uuid);
+                console.log($('.profile_img').attr('src'));
+
+            }
+        });
+    }
+</script>
+</body>
+</html>

@@ -8,3 +8,5 @@ class UserModel(AbstractUser):
     nickname = models.CharField(max_length=50)
     username = models.CharField(max_length=30, unique=False)
     email = models.EmailField(unique=True)
+    thumbnail = models.CharField(max_length=256, default='profile.jpg', blank=True, null=True)
+
