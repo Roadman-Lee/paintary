@@ -18,12 +18,13 @@
 {% block content %}
     <div class="upload">
         <form method="POST">
-            {{ user_id.id }}
+{#            {{ user_id.id }}#}
             {% csrf_token %}
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col-4">
                         <img id="output" width="200">
+                        <img id="styled_img" src="" alt="">
                         <div class="camera">
                             <a href="##"><img src="../../static/image/camera.png"></a>
                         </div>
@@ -32,17 +33,16 @@
 
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Default file input example</label>
-                            <input class="form-control" type="file" id="photo" name="photo" accept="image/*"
-                                   onchange="loadFile(event)">
+                            <input class="form-control" type="file" id="file" name="file" accept="image/*"
+                                   onchange="posting('{{ artist }}')">{{ artist }}
                         </div>
 
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select" aria-label="Default select example" name="value" onchange="posting(value)">
                             <option selected>Select painting style</option>
-                            <option value="1">고흐</option>
-                            <option value="2">피카소</option>
-                            <option value="3">칸딘스키</option>
+                            <option  value="gogh">고흐</option>
+                            <option  value="pikaso">피카소</option>
+                            <option  value="kandinsky">칸딘스키</option>
                         </select>
-
                         <div class="form-floating">
                             <textarea class="form-control" placeholder="Leave a comment here" id="writing"
                                       name="writing"
@@ -83,7 +83,3 @@
         </form>
     </div>
 {% endblock %}
-
-
-
-
