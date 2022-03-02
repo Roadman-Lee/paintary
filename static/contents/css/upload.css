@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'KCC-Jeongbeom';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/KCC-Jeongbeom.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BMEuljiro10yearslater';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/BMEuljiro10yearslater.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.col-8 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #f1f1f1;
+    padding: 10px;
+
+}
+
+.col-4 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto 0;
+}
+
+.form-select {
+    width: 400px;
+    margin-bottom: 10px;
+
+}
+
+.form-floating {
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+.mb-3 img {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Container for flexboxes */
+section {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Style the navigation menu */
+nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #ccc;
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+img {
+    float: left;
+}

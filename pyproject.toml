@@ -10,6 +10,9 @@ Django = "4.0"
 django-allauth = "0.45"
 requests = "^2.27.1"
 PyMySQL = "^1.0.2"
+Pillow = "^9.0.1"
+types-PyMySQL = "^1.0.13"
+
 
 
 [tool.poetry.dev-dependencies]
@@ -22,6 +25,7 @@ flake8 = "^4.0.1"
 cryptography = "^36.0.1"
 PyMySQL = "1.0.2"
 types-PyMySQL = "^1.0.13"
+Pillow = "^9.0.1"
 
 
 [build-system]
