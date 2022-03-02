@@ -747,3 +747,10 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/pycharm,visualstudio,django,python
+
+/node_modules/
+gulpfile.js
+tailwind.config.js
+package.json
+package-lock.json
+/assets/
