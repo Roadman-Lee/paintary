@@ -2,8 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'profile.css' %}">
+    {% block extrahead %}
+    {% endblock %}
     <title>Title</title>
     <link
             href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
@@ -14,7 +17,7 @@
 
     <div class="user-container">
         <div id="user-img">
-            <img src="{% get_media_prefix %}{{ user.thumbnail }}">
+            <img src="{% get_static_prefix %}profile.jpg">
         </div>
         <div id="user-info">
             <h2>{{ user.username }}</h2>
@@ -36,7 +39,6 @@
 {#        </div>#}
 <!--saved contents 보여주는 것 : 인덱스처럼 호버, saved해제 -->
         <div class="saved-content">
-<!-- 중앙 메뉴 -->
             <div style="font-size: 14px;padding: 0 140px;border-top: 1px solid silver; display: flex;width: 100%; flex-direction: row; justify-content: space-evenly">
                 <div target_id="menu_feed" class="menu_content"
                      style="display: flex; flex-direction: row; align-items: center;padding-top: 10px; border-top: 1px solid gray;font-weight: bold"> <span
@@ -51,7 +53,6 @@
                 </span> <b>saved</b>
                 </div>
             </div>
-            <!-- 하단 컨텐츠 -->
             <div id="menu_feed" class="menu_content_box" style="display: flex; flex-direction: column">
                 {% for feed in feed_list %}
                     <div style="display: flex; flex-direction: row">

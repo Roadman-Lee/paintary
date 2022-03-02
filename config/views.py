@@ -10,7 +10,7 @@ class Profile(APIView):
         if email is None:
             return render(request, 'account/login.html')
 
-        user = UserModel.objects.filter(email=email).first()
+        user = User.objects.filter(email=email).first()
         if user is None:
             return render(request, 'account/login.html')
 
@@ -73,4 +73,6 @@ class Profile(APIView):
 
         return render(request,
                       'account/profile.html',
-                      context=dict(user=user))
+                      context=dict(feed_list=feed_list,
+                                   bookmark_feed_list=bookmark_feed_list,
+                                   user=user))
