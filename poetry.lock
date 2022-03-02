@@ -302,7 +302,9 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 name = "pillow"
 version = "9.0.1"
 description = "Python Imaging Library (Fork)"
+
 category = "main"
+
 optional = false
 python-versions = ">=3.7"
 
@@ -499,7 +501,7 @@ python-versions = ">=3.7"
 name = "types-pymysql"
 version = "1.0.13"
 description = "Typing stubs for PyMySQL"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -559,7 +561,9 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
+
 content-hash = "787c75f22e812a321729571cb4f324f664a43f7ec19d31a6f9eba5542fed0a81"
+
 
 [metadata.files]
 asgiref = [

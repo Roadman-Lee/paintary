@@ -1,3 +1,4 @@
+
 {% extends "base.html" %}
 {% block extrahead %}
 {% load static %}
@@ -7,14 +8,18 @@
 {% block content %}
     <hr>
 <div class="feed">
+
     <table  style="width:100%">
         <tr style="background-color:white;">
             {% for post in posts %}
                 <a style="text-decoration-line: none;" href="/detail/{{ post.id }}" id="post_id">
                           <img style="border-radius: 10px; text-decoration-line: none; margin: auto; width: 250px;" src="{{ post.photo }}">
                 </a>
+
             {% endfor %}
         </tr>
     </table>
 </div>
+
 {% endblock %}
+

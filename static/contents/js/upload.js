@@ -8,6 +8,7 @@ var loadFile = function (event) {
     image.src = URL.createObjectURL(event.target.files[0]);
 };
 
+
 function posting(artist) {
 
     const value = artist
@@ -30,6 +31,7 @@ function posting(artist) {
             let image_url = response['file_url'];
             console.log(image_url);
             $("#styled_img").attr('src', image_url)
+
             return image_url
         }
     });

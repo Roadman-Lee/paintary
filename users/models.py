@@ -1,6 +1,5 @@
+from django.contrib.auth.models import AbstractUser, User
 from django.db import models
-from django.contrib.auth.models import AbstractUser
-
 
 class UserModel(AbstractUser):
     class Meta:
@@ -8,3 +7,5 @@ class UserModel(AbstractUser):
     nickname = models.CharField(max_length=50)
     username = models.CharField(max_length=30, unique=False)
     email = models.EmailField(unique=True)
+    email_token = models.CharField(max_length=50, blank=True, null=True)
+
