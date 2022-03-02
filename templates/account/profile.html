@@ -23,62 +23,51 @@
             <h2>{{ user.username }}</h2>
             <h3>{{ user.email }}</h3>
             <button id="button_profile_upload">프로필 변경</button>
-            <input type="file" id="input_fileupload" style="display:none;"/>
+            <input type="file" id="input_fileupload" style="display: none;"/>
         </div>
     </div>
-{#    <div class="mypage-container">#}
-{#        <hr>#}
-{#        <div class="mypage-wrapper">#}
-{#            <div id="created">#}
-{#                <h3>created</h3>#}
-{#            </div>#}
-{#            <div id="saved">#}
-{#                <h3>Saved</h3>#}
-{#            </div>#}
-{##}
-{#        </div>#}
+
 <!--saved contents 보여주는 것 : 인덱스처럼 호버, saved해제 -->
-        <div class="saved-content">
-            <div style="font-size: 14px;padding: 0 140px;border-top: 1px solid silver; display: flex;width: 100%; flex-direction: row; justify-content: space-evenly">
-                <div target_id="menu_feed" class="menu_content"
-                     style="display: flex; flex-direction: row; align-items: center;padding-top: 10px; border-top: 1px solid gray;font-weight: bold"> <span
-                        class="material-icons-outlined" style="font-size: 16px">
-                    grid_on
-                    </span> created
-                </div>
-                <div target_id="menu_bookmark" class="menu_content"
-                     style="display: flex; flex-direction: row; align-items: center;padding-top: 10px;font-weight: lighter"> <span
-                        class="material-icons-outlined" style="font-size: 16px">
-                    bookmark_border
-                </span> <b>saved</b>
-                </div>
+    <div class="saved-content">
+        <div style="font-size: 14px;padding: 0 140px;border-top: 1px solid silver; display: flex;width: 100%; flex-direction: row; justify-content: space-evenly">
+            <div target_id="menu_feed" class="menu_content"
+                 style="display: flex; flex-direction: row; align-items: center;padding-top: 10px; border-top: 1px solid gray;font-weight: bold"> <span
+                    class="material-icons-outlined" style="font-size: 16px">
+                grid_on
+                </span> created
             </div>
-            <div id="menu_feed" class="menu_content_box" style="display: flex; flex-direction: column">
-                {% for feed in feed_list %}
-                    <div style="display: flex; flex-direction: row">
-                        {% for row_feed in feed.row_feed_list %}
-                            <div>
-                                <img class="row_feed" src="{% get_media_prefix %}{{ row_feed.image }}">
-                            </div>
-                        {% endfor %}
-                    </div>
-                {% endfor %}
-            </div>
-            <div id="menu_bookmark" class="menu_content_box" style="display: none; flex-direction: column">
-                {% for feed in bookmark_feed_list %}
-                    <div style="display: flex; flex-direction: row">
-                        {% for row_feed in feed.row_bookmark_feed_list %}
-                            <div>
-                                <img class="row_feed" src="{% get_media_prefix %}{{ row_feed.image }}">
-                            </div>
-                        {% endfor %}
-                    </div>
-                {% endfor %}
+            <div target_id="menu_bookmark" class="menu_content"
+                 style="display: flex; flex-direction: row; align-items: center;padding-top: 10px;font-weight: lighter"> <span
+                    class="material-icons-outlined" style="font-size: 16px">
+                bookmark_border
+            </span> <b>saved</b>
             </div>
         </div>
-    </div>
+        <div id="menu_feed" class="menu_content_box" style="display: flex; flex-direction: column">
+            {% for feed in feed_list %}
+                <div style="display: flex; flex-direction: row">
+                    {% for row_feed in feed.row_feed_list %}
+                        <div>
+                            <img class="row_feed" src="{% get_media_prefix %}{{ row_feed.image }}">
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+        <div id="menu_bookmark" class="menu_content_box" style="display: none; flex-direction: column">
+            {% for feed in bookmark_feed_list %}
+                <div style="display: flex; flex-direction: row">
+                    {% for row_feed in feed.row_bookmark_feed_list %}
+                        <div>
+                            <img class="row_feed" src="{% get_media_prefix %}{{ row_feed.image }}">
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
         </div>
     </div>
+
+
 {#    프로필 변경 jquery code#}
 <script defer>
     {##button_profile_upload 를 클릭했을 때 함수가 실행된다#}
