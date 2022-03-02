@@ -13,4 +13,4 @@ MY_DATABASES = {
     }
 }
 
-MY_PASSWORD = "ss1604@1371@"
+MY_PASSWORD = "qwerQWER!!"
