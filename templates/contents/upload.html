@@ -5,6 +5,11 @@
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static "contents/css/upload.css" %}">
+    <script>
+        $.ajaxSetup({
+            headers: {"X-CSRFToken": '{{csrf_token}}'}
+        });
+    </script>
     <script src="{% static "contents/js/upload.js" %}"></script>
     {#    <link rel="stylesheet" href="{% static 'contents/css/upload.css' %}">#}
 
@@ -18,13 +23,14 @@
 {% block content %}
     <div class="upload">
         <form method="POST">
-{#            {{ user_id.id }}#}
+            {#            {{ user_id.id }}#}
             {% csrf_token %}
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col-4">
                         <img id="output" width="200">
                         <img id="styled_img" src="" alt="">
+                        <input id="styled_url" style="display:none" name="styled_url">
                         <div class="camera">
                             <a href="##"><img src="../../static/image/camera.png"></a>
                         </div>
@@ -37,18 +43,21 @@
                                    onchange="posting('{{ artist }}')">{{ artist }}
                         </div>
 
-                        <select class="form-select" aria-label="Default select example" name="value" onchange="posting(value)">
+                        <select class="form-select" aria-label="Default select example" name="value"
+                                onchange="posting(value)">
                             <option selected>Select painting style</option>
-                            <option  value="gogh">고흐</option>
-                            <option  value="pikaso">피카소</option>
-                            <option  value="kandinsky">칸딘스키</option>
+                            <option value="gogh">고흐</option>
+                            <option value="pikaso">피카소</option>
+                            <option value="kandinsky">칸딘스키</option>
                         </select>
+                        <div id="message"></div>
                         <div class="form-floating">
                             <textarea class="form-control" placeholder="Leave a comment here" id="writing"
                                       name="writing"
                                       style="height: 100px"></textarea>
                             <label for="floatingTextarea2">오늘의 일기를 작성하세요</label>
                         </div>
+
 
                         <div class="form-floating">
                             <textarea class="form-control" placeholder="Leave a comment here" id="comment"
