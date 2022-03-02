@@ -1,0 +1,25 @@
+.nav_wrapper {
+    height: 56px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search_input input{
+    width: 50vw;
+    font-size: 20px;
+    height: 40px;
+}
+.search_input{
+    display: flex;
+    align-items: center;
+}
+.btn_search{
+}
+img {
+    height: 40px;
+}
+
+.material-icons-outlined {
+    font-size: 40px;
+}

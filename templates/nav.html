@@ -1,0 +1,30 @@
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static "search/css/style.css" %}">
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+{% endblock %}
+
+<div class="nav_wrapper">
+    <img src="{% static "logo1.png" %}" alt="logo">
+    <div class="search_input">
+        <form action="/search/" method="post" name="search">
+            <input type="text" placeholder="Type to search..">
+        <button class="btn_search">
+            <span class="material-icons-outlined" >
+                search
+            </span>
+        </button>
+        </form>
+    </div>
+    <div class="nav_inner">
+        {% comment %} <img src="{% static "image/logout.png" %}" alt="logout">
+        <img src="{% static "image/default_user_profile.jpeg" %}" alt="profile"> {% endcomment %}
+        <span class="material-icons-outlined">
+            logout
+        </span>
+        <span class="material-icons-outlined">
+            account_circle
+        </span>
+    </div>
+   
+</div>
