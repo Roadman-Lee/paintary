@@ -12,3 +12,5 @@ MY_DATABASES = {
         "PORT": "3306",
     }
 }
+
+MY_PASSWORD = "ss1604@1371@"
