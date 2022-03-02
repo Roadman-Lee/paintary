@@ -31,9 +31,8 @@ function posting(artist) {
             let image_url = response['file_url'];
             console.log(image_url);
             $("#styled_img").attr('src', image_url)
-            $("#styled_url").attr('value', image_url)
+
+            return image_url
         }
     });
-
-
 }

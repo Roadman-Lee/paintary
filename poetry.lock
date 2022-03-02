@@ -302,7 +302,9 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 name = "pillow"
 version = "9.0.1"
 description = "Python Imaging Library (Fork)"
-category = "dev"
+
+category = "main"
+
 optional = false
 python-versions = ">=3.7"
 
@@ -559,11 +561,9 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-<<<<<<< HEAD
-content-hash = "8ab189d7a490b256efdc1e41f8e6bd093100ee600ede5a9e672cdcddf213a2d2"
-=======
-content-hash = "090ae6a17505aeed6c6ae18228b4b22af2b6c1b83c789d0ce54209e4d094f63b"
->>>>>>> search
+
+content-hash = "787c75f22e812a321729571cb4f324f664a43f7ec19d31a6f9eba5542fed0a81"
+
 
 [metadata.files]
 asgiref = [

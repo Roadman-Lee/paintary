@@ -1,19 +1,25 @@
 
 {% extends "base.html" %}
 {% block extrahead %}
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static "contents/css/detail.css" %}" >
-    <title>HTML Tables</title>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static "index.css" %}" >
+<title>HTML Tables</title>
 {% endblock %}
 {% block content %}
     <hr>
 <div class="feed">
-    <table style="width:100%">
-        <tr style="background-color:white">
+
+    <table  style="width:100%">
+        <tr style="background-color:white;">
             {% for post in posts %}
-                <a href="/detail/{{ post.id }}"><img src="{{ post.photo }}"></a>
+                <a style="text-decoration-line: none;" href="/detail/{{ post.id }}" id="post_id">
+                          <img style="border-radius: 10px; text-decoration-line: none; margin: auto; width: 250px;" src="{{ post.photo }}">
+                </a>
+
             {% endfor %}
         </tr>
     </table>
 </div>
+
 {% endblock %}
+

@@ -23,7 +23,7 @@
 {% block content %}
     <div class="upload">
         <form method="POST">
-            {#            {{ user_id.id }}#}
+
             {% csrf_token %}
             <div class="container">
                 <div class="row justify-content-between">
@@ -31,6 +31,7 @@
                         <img id="output" width="200">
                         <img id="styled_img" src="" alt="">
                         <input id="styled_url" style="display:none" name="styled_url">
+
                         <div class="camera">
                             <a href="##"><img src="../../static/image/camera.png"></a>
                         </div>
@@ -43,14 +44,14 @@
                                    onchange="posting('{{ artist }}')">{{ artist }}
                         </div>
 
-                        <select class="form-select" aria-label="Default select example" name="value"
-                                onchange="posting(value)">
+
+                        <select class="form-select" aria-label="Default select example" name="value" onchange="posting(value)">
                             <option selected>Select painting style</option>
-                            <option value="gogh">고흐</option>
-                            <option value="pikaso">피카소</option>
-                            <option value="kandinsky">칸딘스키</option>
+                            <option  value="gogh">고흐</option>
+                            <option  value="pikaso">피카소</option>
+                            <option  value="kandinsky">칸딘스키</option>
                         </select>
-                        <div id="message"></div>
+
                         <div class="form-floating">
                             <textarea class="form-control" placeholder="Leave a comment here" id="writing"
                                       name="writing"
@@ -92,7 +93,3 @@
         </form>
     </div>
 {% endblock %}
-
-
-
-
