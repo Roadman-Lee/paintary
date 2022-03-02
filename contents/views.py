@@ -29,11 +29,12 @@ def upload_view(request, id):
             return redirect('upload',id)
 
 def index(request):
-    user = request.user.is_authenticated
-    if user:
-        if request.method == 'GET':
-            posts = PostModel.objects.all()
-            return render(request, 'contents/index.html', {'posts': posts})
+    # user = request.user.is_authenticated
+    # if user:
+    #     if request.method == 'GET':
+    #         posts = PostModel.objects.all()
+    #         return render(request, 'contents/index.html', {'posts': posts})
+    return render(request, 'contents/index.html')
 
 
 def detail(request, postid):

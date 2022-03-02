@@ -1,0 +1,16 @@
+.nav_wrapper {
+    height: 56px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+img {
+    height: 75%;
+}
+
+.search_input input{
+    width: 50vw;
+    font-size: 20px;
+    height: 40px;
+}
